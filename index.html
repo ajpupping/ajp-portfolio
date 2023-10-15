@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJP's Portfolio</title>
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -10,7 +11,7 @@
 
 <body>
     <header>
-        <h1>AJP's Portfolio</h1>
+        <h1 class="title">AJP's Portfolio</h1> 
         <nav>
             <ul>
                 <li> <a href="#">About Me</a></li>
@@ -20,14 +21,17 @@
         </nav>
     </header>
 
-    <section class="about-me">
+    <section class="about-me" id="about-me">
         <h2>About Me</h2>
-        <p>Insert facts about me here.</p>
-        <img src="#" alt="a picture of me">
+        <article>
+            <img src="#" alt="a picture of me">
+            <p>Insert facts about me here.</p>
+        </article>
+     
     </section>
 
     <main>
-        <h2>Projects</h2>
+        <h2 id="projects">Projects</h2>
         <div class="hero">
             <img src="#" alt="an image of the horiseon website">
         </div>
@@ -40,10 +44,9 @@
     </main>
 
     <footer>
-        <h3>Contact Information</h3>
+        <h3 id="contact">Contact Information: </h3>
         <nav>
             <ul>
-                <li>phone number</li>
                 <li> <a href="#">email</a></li>
                 <li> <a href="#">github</a></li>
                 <li> <a href="#">instagram</a></li>

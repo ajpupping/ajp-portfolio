@@ -1,0 +1,80 @@
+:root {
+  --purple: #382446;
+  --white: #fff;
+  --light-purple: #d6bee8;
+}
+
+/* 
+This border is used to see how the boxes are aligning. 
+Remove or change color when layout is complete. 
+*/
+
+* {
+  border: 1px solid green;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--light-purple);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    background-color: var(--purple);
+    color: var(--white);
+  }
+
+  h1 {
+    font-size: 200%;
+  }
+  
+  h2 {
+    font-size: 175%;
+  }
+
+  h3 {
+    font-size: 150%;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 300px;
+  }
+
+  nav a {
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none;
+  }
+ 
+.about-me {
+  padding: 3%;
+}
+
+  main {
+    padding: 3%;
+  }
+  
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    background-color: var(--purple);
+    color: var(--white);
+  }
+  
+  @media screen and (max-width: 600px) {
+    body {
+      flex-direction: column;
+    }
+  }
