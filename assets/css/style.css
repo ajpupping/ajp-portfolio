@@ -59,10 +59,21 @@ body {
   padding: 3%;
 }
 
+.profile-picture {
+  max-height: 200px;
+}
+
   main {
     padding: 3%;
   }
   
+  #hero-image {
+    max-height: 400px;
+  }
+
+  .projects img {
+    max-height: 200px;
+  }
 
   footer {
     display: flex;
