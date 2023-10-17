@@ -8,29 +8,39 @@
 This border is used to see how the boxes are aligning. 
 Remove or change color when layout is complete. 
 */
-
+/*
 * {
   border: 1px solid green;
   box-sizing: border-box;
 }
+*/
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   background-color: var(--light-purple);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 175%;
+}
+
+h3 {
+  font-size: 150%;
+}
+
   header {
+    padding: 2%;
+    background-color: var(--purple);
+    color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--purple);
-    color: var(--white);
-    padding: 20px;
   }
 
   .banner {
@@ -41,18 +51,8 @@ body {
     background-position: center;
 }
 
-  h1 {
-    font-size: 200%;
-  }
-  
-  h2 {
-    font-size: 175%;
-  }
+/* styles links */
 
-  h3 {
-    font-size: 150%;
-  }
-  
   nav ul {
     display: flex;
     justify-content: space-evenly;
@@ -67,29 +67,26 @@ body {
 
 .about-me-header {
   display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  margin: 10px;
+  justify-content: flex-start;
+  padding: 2%;
+  margin: 1%;
   background-color: var(--purple);
   color: var(--white);
 }
 
 .about-me-container {
   display: flex;
-  flex-direction: column;
-  padding: 20px;
-  margin: 10px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 1%;
+  margin: 1%;
   background-color: var(--light-purple);
 }
 
 .about-me {
-  display: flex; 
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px;
-  margin: 10px;
-  width: auto;
+  padding: 1%;
+  margin: 1%;
   background-color: var(--purple);
   color: var(--white);
 } 
@@ -98,45 +95,71 @@ body {
   max-height: 25%;
   max-width: 25%;
 }
-  
-  #hero-image {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 20px;
-    margin: 10px;
-    background-color: var(--purple);
-    color: var(--white)
+ 
+.projects-header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2%;
+  margin: 1%;
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.hero-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1%;
+  margin: 1%;
+  background-color: var(--light-purple);
+}  
+
+#hero-image {
+    max-height: 100%;
+    max-width: 100%;  
+    padding: 2%;
+    margin: 1%;
+    background-color: var(--purple)
   }
 
-  #projects-header {
-    padding: 20px;
-    margin: 10px;
-    background-color: var(--purple);
-    color: var(--white)
-  }
+/*First row of projects */
 
   .projects {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
-    align-content: space-evenly;
+    align-content: center;
+    padding: 1%;
+    margin: 1%;
     background-color: var(--light-purple);
-    color: var(--white)
   }
 
   .projects img {
-    max-width: 40%;
-    max-height: 40%;
-    padding: 20px;
-    margin: 10px;
+    max-width: 85%;
+    max-height: 85%;
+    padding: 2%;
+    margin: 2%;
+    background-color: var(--purple);
+  }
+
+/* Second row of projects */
+  .projects-2 {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    align-content: space-evenly;
-    background-color: var(--purple)
-    
+    align-content: center;
+    padding: 1%;
+    margin: 1%;
+    background-color: var(--light-purple);
+  }
+
+  .projects-2 img {
+    max-width: 85%;
+    max-height: 85%;
+    padding: 2%;
+    margin: 2%;
+    background-color: var(--purple);
   }
 
   footer {
@@ -145,12 +168,28 @@ body {
     align-items: center;
     background-color: var(--purple);
     color: var(--white);
-    padding: 20px;
+    padding: 2%;
   }
   
-  
-  @media screen and (max-width: 600px) {
+  /*Adjusts display for smaller screen size*/
+
+  @media screen and (max-width: 798px) {
+    header {
+      flex-direction: column;
+    }
     body {
+      flex-direction: column;
+    }
+    .about-me-container {
+      flex-direction: column;
+    }
+    .projects {
+      flex-direction: column;
+    }
+    .projects-2 {
+      flex-direction: column;
+    }
+    footer {
       flex-direction: column;
     }
   }
